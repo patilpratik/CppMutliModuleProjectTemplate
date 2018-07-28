@@ -1,0 +1,9 @@
+Package: sample-pmaths-project
+Version: 1.0-1
+Section: custom
+Priority: optional
+Architecture: all
+Essential: no
+Installed-Size: 1024
+Maintainer: Pratik Patil <patil.pratik.r@gmail.com>
+Description: Some Description 
