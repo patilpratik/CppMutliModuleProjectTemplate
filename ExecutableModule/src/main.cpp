@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "../../ExecutableModule/include/pmaths.h"
+#include "LibraryModule/pmaths.h"
 
 int
 main (int argc, char* argv[])

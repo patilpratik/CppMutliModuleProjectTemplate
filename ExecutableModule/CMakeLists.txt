@@ -8,8 +8,10 @@ project (sample-executable)
 
 if ( COMPLETE_BUILD STREQUAL "ON")
   set( WORKING_DIR "${CMAKE_CURRENT_SOURCE_DIR}/")
+  set (PROJECT_GLOBAL_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include) 
 else ()
   set (WORKING_DIR ../LibraryModule)
+  set (PROJECT_GLOBAL_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/../include) 
 endif ()
 
 
@@ -25,7 +27,6 @@ SET(CMAKE_INSTALL_PREFIX "./" CACHE INTERNAL "Prefix prepended to install direct
 set (PACKAGE_ARTIFACTS Package/Deliverable/artifacts)
 set (PROJECT_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
 set (PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
- 
 
 # get sources
 # Find source files
@@ -33,6 +34,7 @@ file(GLOB SOURCES src/*.cpp)
  
 include_directories("${PROJECT_BINARY_DIR}")
 include_directories("${PROJECT_INCLUDE_DIR}")
+include_directories("${PROJECT_GLOBAL_INCLUDE_DIR}")
 
 
 # linking to the sample-library
