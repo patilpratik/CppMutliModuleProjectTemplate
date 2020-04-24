@@ -37,7 +37,7 @@ find_package(Threads REQUIRED)
 add_library(gtest STATIC IMPORTED) # or STATIC instead of SHARED
 set_target_properties(gtest PROPERTIES
 # Update this location to point to libgtest.a
-  IMPORTED_LOCATION "../../../../googleTest/googletest/googlemock/gtest/libgtest.a"
+  IMPORTED_LOCATION "../../../../googleTest/googletest/lib/libgtest.a"
 )
 
 # adding library to test
